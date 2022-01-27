@@ -4,7 +4,11 @@ Running a python container from WSL using VSCode
 Purpose
 --------
 
-This project contains a python project that can be run from WSL using VSCode.
+This project contains a python project and the configurations needed to run and develope the project in a python container from WSL using VSCode.
+
+The Dockerfile to start the container in VSCode is a slight modification of the starter python container provided by Microsoft. 
+
+The python project is created with Poetry, my favorite python package manager. 
 
 Pre-requisites
 ---------------
