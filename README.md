@@ -39,7 +39,7 @@ Note: You do need to run `sudo apt-get update` again for the next step to work
 $ sudo apt-get install docker-ce docker-ce-cli containerd.io
 ```
 
-At this point Docker should be installed successfully. You do need to run a couple extra commands to start Docker Daemon on start up though:
+At this point Docker should be installed successfully. You do need to run a couple extra commands to start Docker Daemon:
 
 ```
 $ sudo usermod -aG docker $USER
