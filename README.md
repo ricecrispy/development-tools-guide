@@ -58,3 +58,9 @@ At this point you can verify that docker is up and running by running the follow
 ```
 $ docker run hello-world
 ```
+
+## Developing in a container in WSL with VSCode
+
+[Sample Code](https://github.com/ricecrispy/development-tools-guide/tree/main/python-poetry-container)
+
+In the sample code, the Dockerfile builds a container that ships with python and the poetry package manager, so you can start developing right away without wasting time configuring your local machine.
