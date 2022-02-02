@@ -8,15 +8,8 @@ FROM mcr.microsoft.com/vscode/devcontainers/python:0-${VARIANT}
 ARG NODE_VERSION="none"
 RUN if [ "${NODE_VERSION}" != "none" ]; then su vscode -c "umask 0002 && . /usr/local/share/nvm/nvm.sh && nvm install ${NODE_VERSION} 2>&1"; fi
 
+# Install poetry
 RUN su vscode -c "curl -sSL https://install.python-poetry.org | python -"
-
-RUN su vscode -c "sudo curl -sSL https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip -o awscliv2.zip"
-RUN su vscode -c "sudo unzip awscliv2.zip"
-RUN su vscode -c "sudo ./aws/install --bin-dir /usr/local/bin --install-dir /usr/local/aws-cli --update"
-
-RUN su vscode -c "sudo curl -sSL https://github.com/aws/aws-sam-cli/releases/latest/download/aws-sam-cli-linux-x86_64.zip -o awssamcli.zip"
-RUN su vscode -c "sudo unzip awssamcli.zip -d sam-installation"
-RUN su vscode -c "sudo ./sam-installation/install"
 
 # [Optional] If your pip requirements rarely change, uncomment this section to add them to the image.
 # COPY requirements.txt /tmp/pip-tmp/
