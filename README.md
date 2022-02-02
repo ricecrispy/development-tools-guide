@@ -61,6 +61,10 @@ $ docker run hello-world
 
 ## Developing in a container in WSL with VSCode
 
-[Sample Code](https://github.com/ricecrispy/development-tools-guide/tree/main/python-poetry-container)
+[Python container](https://github.com/ricecrispy/development-tools-guide/tree/main/python-poetry-container)
 
-In the sample code, the Dockerfile builds a container that ships with python and the poetry package manager, so you can start developing right away without wasting time configuring your local machine.
+In this sample code, the Dockerfile builds a container that ships with python and the poetry package manager, so you can start developing right away without wasting time configuring your local machine.
+
+[Ubuntu container with AWS, AWS SAM, and Terraform CLI](https://github.com/ricecrispy/development-tools-guide/tree/main/aws-cli-container)
+
+In this sample code, the Dockerfile builds a simple ubuntu continer that ships with AWS, AWS SAM, and Terraform.

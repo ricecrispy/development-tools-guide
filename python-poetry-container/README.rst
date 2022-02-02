@@ -14,24 +14,27 @@ Pre-requisites
 
 VSCode
 
-WSL
+WSL with Docker installed
+
 
 Setting up
 ----------
 
-1. ``git clone https://github.com/ricecrispy/development-tools-guide.git`` 
+Start WSL and run the folloowing commands:
 
-2. ``cd development-tools-guide/python-poetry-container``
+``git clone https://github.com/ricecrispy/development-tools-guide.git`` 
 
-3. ``code .``
+``cd development-tools-guide/python-poetry-container``
 
-4. Follow this `article`_ to install all the VSCode extensions needed
+``code .``
 
-5. In VSCode, type ``control + shift + p``, then type ``Remote-Containers: Reopen in container``
+5. Follow this `article`_ to install all the VSCode extensions needed
 
-6. Open a new integrated terminal and run the app with ``poetry run python print_greetings/print_greetings.py``
+6. In VSCode, type ``control + shift + p``, then type ``Remote-Containers: Reopen in container``
 
-7. You can also run the tests with ``poetry run pytest``
+7. Open a new integrated terminal and run the app with ``poetry run python print_greetings/print_greetings.py``
+
+8. You can also run the tests with ``poetry run pytest``
 
 
 
