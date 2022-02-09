@@ -4,7 +4,7 @@ Running a python + poetry container from WSL using VSCode
 Purpose
 --------
 
-This project contains a sample python project, which is initiaited with `poetry`_, and the configurations needed to run and develope the project in a python container from WSL using VSCode.
+This project contains a sample python project, which is initiaited with `poetry`_, and the configurations needed to run and develop the project in a python container from WSL using VSCode.
 
 The Dockerfile to start the container in VSCode is a slight modification of the starter python container provided by Microsoft. 
  
