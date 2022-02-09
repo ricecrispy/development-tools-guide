@@ -20,7 +20,7 @@ WSL with Docker installed
 Setting up
 ----------
 
-Start WSL and run the folloowing commands:
+Start WSL and run the following commands:
 
 ``git clone https://github.com/ricecrispy/development-tools-guide.git`` 
 
