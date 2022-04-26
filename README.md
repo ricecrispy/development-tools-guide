@@ -9,7 +9,11 @@ A collection of guides/tips/notes for installing different tools for development
 
 ```
 wsl --list --online # this list the available linux distro to install
+```
+```
 wsl --install -d <Distro> # replace <Distro> with the linux distro name of your choice
+```
+```
 New-NetFirewallRule -DisplayName "WSL" -Direction Inbound  -InterfaceAlias "vEthernet (WSL)"  -Action Allow # add a firewall rule to allow wsl traffic 
 ```
 
