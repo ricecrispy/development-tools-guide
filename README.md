@@ -3,7 +3,7 @@ A collection of guides/tips/notes for installing different tools for development
 
 ## Installing Docker Engine on WSL
 
-1. Follow this [guide](https://docs.microsoft.com/en-us/windows/wsl/install) to configure WSL in your windows machine
+1. Follow this [guide](https://docs.microsoft.com/en-us/windows/wsl/install) to configure WSL on your windows machine
 
 2. Open PowerShell in admin mode to install a linux distro of your choice. Mainly you want to run the following command:
 
