@@ -1,3 +1,5 @@
+# reference: https://learn.microsoft.com/en-us/windows/wsl/install
+
 # Run as Admin
 wsl --install
 
