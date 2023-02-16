@@ -2,14 +2,13 @@
 
 # reference: https://docs.docker.com/engine/install/ubuntu/
 
+sudo apt update && sudo apt upgrade
 sudo apt-get remove docker docker-engine docker.io containerd runc
-
-sudo apt-get update
 sudo apt-get install \
     ca-certificates \
     curl \
     gnupg \
-    lsb-release
+    lsb-release -y
 
 sudo mkdir -m 0755 -p /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
@@ -23,7 +22,7 @@ sudo apt-get update
 sudo chmod a+r /etc/apt/keyrings/docker.gpg
 sudo apt-get update
 
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
 
 sudo groupadd docker
 sudo usermod -aG docker $USER
@@ -31,3 +30,8 @@ newgrp docker
 
 sudo systemctl enable docker.service
 sudo systemctl enable containerd.service
+
+# I encountered an issue where the docker daemon refused to run with sudo service docker start
+# In this case you can try running this command:
+# sudo update-alternatives --config iptables
+# and then select the /usr/sbin/iptables-legacy option
