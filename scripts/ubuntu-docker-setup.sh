@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # reference: https://docs.docker.com/engine/install/ubuntu/
-# Uninstall old versions
+
 sudo apt-get remove docker docker-engine docker.io containerd runc
 
 sudo apt-get update
@@ -24,3 +24,10 @@ sudo chmod a+r /etc/apt/keyrings/docker.gpg
 sudo apt-get update
 
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+sudo groupadd docker
+sudo usermod -aG docker $USER
+newgrp docker
+
+sudo systemctl enable docker.service
+sudo systemctl enable containerd.service
