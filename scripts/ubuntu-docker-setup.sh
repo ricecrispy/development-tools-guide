@@ -31,7 +31,8 @@ newgrp docker
 sudo systemctl enable docker.service
 sudo systemctl enable containerd.service
 
-# I encountered an issue where the docker daemon refused to run with sudo service docker start
+# reference: https://github.com/docker/for-linux/issues/1406#issuecomment-1183487816
+# In Ubuntu 22.04, it might have an issue with the iptables version that prevents docker daemon from running.
 # In this case you can try running this command:
 # sudo update-alternatives --config iptables
-# and then select the /usr/sbin/iptables-legacy option
+# and then select the /usr/sbin/iptables-legacy option.
