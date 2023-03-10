@@ -1,77 +1,14 @@
 # development-tools-guide
 A collection of guides/tips/notes for installing different tools for development
 
-## Installing Docker Engine on WSL
+## Reference
 
-1. Follow this [guide](https://docs.microsoft.com/en-us/windows/wsl/install) to configure WSL on your windows machine
+[Working with Docker Desktop and WSL](https://docs.docker.com/desktop/windows/wsl/)
 
-2. Open PowerShell in admin mode to install a linux distro of your choice. Mainly you want to run the following command:
+[Installing Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
 
-```
-wsl --list --online # this list the available linux distro to install
-```
-```
-wsl --install -d <Distro> # replace <Distro> with the linux distro name of your choice
-```
-```
-New-NetFirewallRule -DisplayName "WSL" -Direction Inbound  -InterfaceAlias "vEthernet (WSL)"  -Action Allow # add a firewall rule to allow wsl traffic 
-```
+[Working with Git Credential Manager and WSL](https://learn.microsoft.com/en-us/windows/wsl/tutorials/wsl-git#git-credential-manager-setup)
 
-3. Open your newly downloaded Linux OS to configure it to your liking. I just did a simple `sudo apt-get update`
-
-3. Go to this [page](https://docs.docker.com/engine/install/) and follow the guide to install docker engine on your WSL. Mainly you want to run these commands:
-
-```
-sudo apt-get install \
-  ca-certificates \
-  curl \
-  gnupg \
-  lsb-release
-
-```
-
-```
-sudo mkdir -p /etc/apt/keyrings
-
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-```
-
-```
-echo \
-  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-```
-
-```
-sudo apt-get update 
-```
-Note: You do need to run `sudo apt-get update` again for the next step to work
-
-```
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
-```
-
-At this point Docker should be installed successfully. You do need to run a couple extra commands to start Docker Daemon:
-
-```
-sudo groupadd docker
-
-sudo usermod -aG docker $USER
-```
-
-```
-newgrp docker
-```
-
-```
-sudo service docker start
-```
-
-At this point you can verify that docker is up and running by running the following command:
-
-```
-docker run hello-world
-```
 
 ## Developing in a container in WSL with VSCode
 
